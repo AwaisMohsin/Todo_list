@@ -23,5 +23,12 @@ console.log(newtodo);
 if(newtodo.length){             // if positive value than go inside if
     generateTemplate(newtodo);         
 }
+ e.target.reset();              //you can also use addForm.reset();
 });
 
+list.addEventListener('click',function(e){          //whenever you click on list
+if(e.target.classList.contains('delete')){          //if clicked list conttains (delete: which trash icon)
+    e.target.parentElement.remove();                //Than remove parent element(le), you cant use this.remover();
+
+}
+})
