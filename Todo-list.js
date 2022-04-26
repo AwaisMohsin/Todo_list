@@ -20,6 +20,8 @@ addForm.addEventListener('submit',function(e){
 e.preventDefault();
 const newtodo = e.target.add.value.trim() ;
 console.log(newtodo);
-generateTemplate(newtodo);
+if(newtodo.length){             // if positive value than go inside if
+    generateTemplate(newtodo);         
+}
 });
 
